@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#081426">
+    <title>A Little Cat for You 💙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="game-container">
+    <header>
+        <span class="logo">♡ little paws</span>
+        <span class="subtitle">a tiny world for you</span>
+    </header>
+
+    <section class="intro">
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+        <h1>Catch some <span>love.</span></h1>
+        <p class="description">
+            Help the little kitty collect hearts to unlock a special message.
+        </p>
+    </section>
+
+    <section class="game-card">
+        <div class="game-top">
+            <span>🐾 KITTY ADVENTURE</span>
+            <span class="score">♡ <b id="score">0</b> / 5</span>
+        </div>
+
+        <div id="game" class="game" tabindex="0" aria-label="Cat game. Use arrow keys or WASD to move.">
+            <div class="moon"></div>
+            <div class="cloud cloud-one">☁️</div>
+            <div class="cloud cloud-two">☁️</div>
+            <div class="stars">✦ · ✧  · ✦ · ✧</div>
+
+            <div id="cat" class="cat" role="img" aria-label="Playable cat">🐈</div>
+            <div id="heart" class="heart" role="img" aria-label="Heart to collect">💗</div>
+
+            <div class="ground"></div>
+            <div class="game-hint" id="hint">Move around and catch the hearts!</div>
+        </div>
+
+        <div class="controls">
+            <p class="control-label">MOVE YOUR KITTY</p>
+            <div class="d-pad">
+                <button class="direction up" data-dir="up" aria-label="Move up">▲</button>
+                <button class="direction left" data-dir="left" aria-label="Move left">◀️</button>
+                <button class="direction down" data-dir="down" aria-label="Move down">▼</button>
+                <button class="direction right" data-dir="right" aria-label="Move right">▶️</button>
+            </div>
+            <p class="keyboard-hint">Or use the arrow keys / WASD on your keyboard.</p>
+        </div>
+
+        <button id="messageBtn" class="message-btn" disabled>
+            Collect 5 hearts to open your message 💌
+        </button>
+
+        <button id="restartBtn" class="restart-btn">↻ Start again</button>
+    </section>
+
+    <footer>made with ♡, just for you.</footer>
+</main>
+
+<div id="messageModal" class="modal" aria-hidden="true">
+    <div class="message-box">
+        <button id="closeBtn" class="close-btn" aria-label="Close message">×</button>
+        <div class="letter-icon">💌</div>
+        <p class="eyebrow">A LITTLE MESSAGE FOR YOU</p>
+        <h2>Hey, Baby. ♡</h2>
+        <p id="messageText" class="message-text">
+            If I could give you one thing in this world, it would be the ability
+            to see yourself through my eyes. Then you'd understand how special
+            you really are.
+        </p>
+        <div class="message-cat">🐱 💗 🐱</div>
+        <button id="anotherBtn" class="another-btn">Read it again ♡</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
